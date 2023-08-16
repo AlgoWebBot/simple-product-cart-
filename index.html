@@ -1,0 +1,123 @@
+<html>
+<head>
+    <!-- daisy ui -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <title>Simple Product List</title>
+</head>
+    <div class="container mx-auto bg-slate-50">
+        <div class="navbar bg-base-100">
+            <div class="flex-1">
+                <a class="btn btn-ghost normal-case text-xl">daisyUI</a>
+            </div>
+            <div class="flex-none">
+                <div class="dropdown dropdown-end">
+                    <label tabindex="0" class="btn btn-ghost btn-circle">
+                        <div class="indicator">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                            </svg>
+                            <span class="badge badge-sm indicator-item bg-green-500">0</span>
+                        </div>
+                    </label>
+                    <div tabindex="0" class="mt-3 z-[1] card card-compact dropdown-content w-52 bg-base-100 shadow">
+                        <div class="card-body">
+                            <span class="font-bold text-lg">8 Items</span>
+                            <span class="text-info">Subtotal: $999</span>
+                            <div class="card-actions">
+                                <button class="btn btn-primary btn-block">View cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dropdown dropdown-end">
+                    <label tabindex="0" class="btn btn-ghost btn-circle avatar">
+                        <div class="w-10 rounded-full">
+                            <img src="https://picsum.photos/200/300" />
+                        </div>
+                    </label>
+                    <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                        <li>
+                            <a class="justify-between">
+                                Profile
+                                <span class="badge">New</span>
+                            </a>
+                        </li>
+                        <li><a>Settings</a></li>
+                        <li><a>Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="lg:flex lg:justify-between">
+            <div class="lg:grid lg:grid-cols-2 lg:justify-between items-center gap-10 p-10">
+                <div class="card w-96 bg-base-100 shadow-xl">
+                    <figure class="px-10 pt-10">
+                        <img src="https://picsum.photos/300/200" alt="Shoes" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                        <h2 class="card-title">Shirt</h2>
+                        <p>If a dog chews shoes whose shoes does he choose?</p>
+                        <h2 class="card-title">55$</h2>
+                        <div class="card-actions">
+                            <button onclick="buyNow(this)" class="btn btn-primary">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card w-96 bg-base-100 shadow-xl">
+                    <figure class="px-10 pt-10">
+                        <img src="https://picsum.photos/300/200" alt="Shoes" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                        <h2 class="card-title">Pant</h2>
+                        <p>If a dog chews shoes whose shoes does he choose?</p>
+                        <h2 class="card-title">35$</h2>
+                        <div class="card-actions">
+                            <button onclick="buyNow(this)" class="btn btn-primary">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card w-96 bg-base-100 shadow-xl">
+                    <figure class="px-10 pt-10">
+                        <img src="https://picsum.photos/300/200" alt="Shoes" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                        <h2 class="card-title">Mobile</h2>
+                        <p>If a dog chews shoes whose shoes does he choose?</p>
+                        <h2 class="card-title">45$</h2>
+                        <div class="card-actions">
+                            <button onclick="buyNow(this)" class="btn btn-primary">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card w-96 bg-base-100 shadow-xl">
+                    <figure class="px-10 pt-10">
+                        <img src="https://picsum.photos/300/200" alt="Shoes" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                        <h2 class="card-title">Laptop</h2>
+                        <p>If a dog chews shoes whose shoes does he choose?</p>
+                        <h2 class="card-title">25$</h2>
+                        <div class="card-actions">
+                            <button onclick="buyNow(this)" class="btn btn-primary">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-[35%] p-10">
+                <h1 class="title text-center text-5xl font-bold border-b-2 mb-2J">Price List</h1>
+                <h1 class="title text-center text-2xl font-bold">Total : </h1>
+                <h1 class="title text-center text-2xl font-bold">Discount : </h1>
+                <h1 class="title text-center text-2xl font-bold border-b-2">Grand Total : </h1>
+                <div id="parent-container" class="min-h-[500px] mt-5 text-center text-3xl list-none space-y-2">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/product.js"></script>
+</html>
